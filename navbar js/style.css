@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    height: 80px;
+    width: 100vw;
+    background-color: black;
+    color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+
+}
+
+.navbar .logo {
+    font-size: 35px;
+    padding: 5px 40px;
+    font-weight: bolder;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 30px;
+    padding: 5px 40px;
+    flex-wrap: wrap;
+
+}
+
+.navbar ul li {
+    list-style: none;
+    font-size: 25px;
+    color: white;
+}
+
+
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 10px auto;
+    -webkit-transition: all 1s ease-out;
+    transition: all 0.3s ease-out;
+    background-color: orange;
+}
+
+.hamburger {
+    color: orange;
+
+    display: none;
+}
+
+
+@media screen and (max-width: 576px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    li {
+        color: orange;
+    }
+
+    .menu.show {
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        width: 40vw;
+        background-color: rgb(8, 8, 8);
+        position: absolute;
+        top: 80;
+        left: -10;
+        gap: 20px;
+        text-align: center;
+        padding-top: 80px;
+        cursor: pointer;
+    }
+
+    .orange {
+        color: orange !important;
+        cursor: pointer;
+    }
+
+    .orange:hover {
+        border-bottom: 2px solid orange;
+        border-color: orange;
+        border-radius: 5px;
+        transition: all 1.2s ease;
+        transform: translateY(-15px);
+    }
+
+    .hamburger.show .bar1 {
+        transform: translateY(8px)rotate(45deg);
+    }
+
+    .hamburger.show .bar3 {
+        transform: translateY(-8px)rotate(-45deg);
+
+    }
+
+    .hamburger.show .bar2 {
+        opacity: 0;
+    }
+
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: orange;
+        transition: 0.3s ease;
+        cursor: pointer;
+    }
+
+}
